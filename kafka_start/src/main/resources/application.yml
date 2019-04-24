@@ -1,0 +1,16 @@
+server:
+  port: 7070 
+
+spring:
+  kafka:
+    bootstrap-servers:
+    
+    consumer:
+      group-id: shopapi
+      auto-offset-reset: latest # latest - 토픽의 가장 마지막 부터 메시지를 가져옴, earliest - 처음부터 메시지를 가져옴
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      client-id: shopapi
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -10,7 +10,7 @@ public class KafkaConsumer {
 //	
 	
 	//카프카 컨슈머
-	@KafkaListener(topics = {"javainuse-topic"})
+//	@KafkaListener(topics = {"hi-topic"})
 	public void getKafkaTopic(ConsumerRecord<String, String> consumerRecord) {
 		System.out.println("getKafkaTopic11==>>{}" + consumerRecord.toString()); 
 		
